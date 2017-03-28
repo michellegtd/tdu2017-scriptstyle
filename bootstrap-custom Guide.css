@@ -1,0 +1,91 @@
+/*	Replace the left-side values with hexadecimal colors, throughout the file below.
+
+	Color Key:
+
+	@brand-primary					= baseline color (from which to calculate other colors by)
+	@link-hover-color 				= 15% darker than @brand-primary
+	@btn-hover 						= 10% darker than @brand-primary
+	@btn-primary-border 			= 5% darker than @brand-primary
+	@btn-hover-border 				= 20% darker than @brand-primary
+	@list-group-active-text-color 	= 40% lighter than @brand-primary
+
+	You can auto-generate these values (and this file), but choosing a custom color in the stock layout editor.
+
+*/
+
+/* gutters and body gradient override */
+body{background-color:@brand-primary; background-image:linear-gradient(to bottom,rgba(255,255,255,0) 50px,#ffffff 700px)}
+
+/* typography */
+body,a {font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;color:#333}
+a{color:@brand-primary}
+a:hover,a:focus{color:@link-hover-color}
+.text-primary{color:@brand-primary}
+a.text-primary:hover,a.text-primary:focus{color:@btn-hover}
+.bg-primary{background-color:@brand-primary}
+a.bg-primary:hover,a.bg-primary:focus{background-color:@btn-hover}
+
+/* tables */
+.table .table{background-color:@brand-primary}
+
+/* buttons */
+.btn-primary{background-color:@brand-primary;border-color:@btn-primary-border}
+.btn-primary:focus,.btn-primary.focus{background-color:@brand-primary}
+.btn-primary:hover{background-color:@btn-hover;border-color:@btn-hover-border}
+.btn-primary:active,.btn-primary.active,.open>.dropdown-toggle.btn-primary{background-color:@btn-hover;border-color:@btn-hover-border}
+.btn-primary:active:hover,.btn-primary.active:hover,.open>.dropdown-toggle.btn-primary:hover,.btn-primary:active:focus,.btn-primary.active:focus,.open>.dropdown-toggle.btn-primary:focus,.btn-primary:active.focus,.btn-primary.active.focus,.open>.dropdown-toggle.btn-primary.focus{background-color:@brand-primary}
+.btn-primary.disabled:hover,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary:hover,.btn-primary.disabled:focus,.btn-primary[disabled]:focus,fieldset[disabled] .btn-primary:focus,.btn-primary.disabled.focus,.btn-primary[disabled].focus,fieldset[disabled] .btn-primary.focus{background-color:@brand-primary;border-color:@btn-primary-border}
+.btn-primary .badge{color:@brand-primary}
+.btn-link{color:@brand-primary}
+.btn-link:hover,.btn-link:focus{color:@link-hover-color}
+
+/* dropdowns */
+.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus{background-color:@brand-primary}
+
+/* navs */
+.nav .open>a,.nav .open>a:hover,.nav .open>a:focus{border-color:@brand-primary}
+.nav-tabs>li.active>a,.nav-tabs>li.active>a:hover,.nav-tabs>li.active>a:focus{background-color:@brand-primary}
+.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:hover,.nav-tabs.nav-justified>.active>a:focus{border-bottom-color:@brand-primary}
+.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{background-color:@brand-primary}
+.nav-tabs-justified>.active>a,.nav-tabs-justified>.active>a:hover,.nav-tabs-justified>.active>a:focus{border-bottom-color:@brand-primary}
+
+/* paginations */
+.pagination>li>a,.pagination>li>span{color:@brand-primary}
+.pagination>li>a:hover,.pagination>li>span:hover,.pagination>li>a:focus,.pagination>li>span:focus{color:@link-hover-color}
+.pagination>.active>a,.pagination>.active>span,.pagination>.active>a:hover,.pagination>.active>span:hover,.pagination>.active>a:focus,.pagination>.active>span:focus{background-color:@brand-primary;border-color:@brand-primary}
+
+/* labels */
+.label-primary{background-color:@brand-primary}
+.label-primary[href]:hover,.label-primary[href]:focus{background-color:@btn-hover}
+
+/* thumbnails */
+.img-thumbnail{background-color:@brand-primary}
+.thumbnail{background-color:@brand-primary}
+a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active{border-color:@brand-primary}
+
+/* progress bars */
+.progress-bar{background-color:@brand-primary}
+
+/* list groups */
+.list-group-item.active>.badge,.nav-pills>.active>a>.badge{color:@brand-primary}
+.list-group-item.active,.list-group-item.active:hover,.list-group-item.active:focus{background-color:@brand-primary;border-color:@brand-primary}
+.list-group-item.active .list-group-item-text,.list-group-item.active:hover .list-group-item-text,.list-group-item.active:focus .list-group-item-text{color:@list-group-active-text-color}
+
+/* panels */
+.panel{box-shadow:0px 0px 10px rgba(0,0,0,0.2)}
+.panel-primary{border-color:@brand-primary}
+.panel-primary>.panel-heading{background-color:@brand-primary;border-color:@brand-primary;background-image:linear-gradient(to bottom,rgba(255,255,255,0.25) 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.25) 100%)}
+.panel-primary>.panel-heading+.panel-collapse>.panel-body{border-top-color:@brand-primary}
+.panel-primary>.panel-heading .badge{color:@brand-primary}
+.panel-primary>.panel-footer+.panel-collapse>.panel-body{border-bottom-color:@brand-primary}
+
+/* header / footer */
+header{background-image:linear-gradient(to bottom,#ffffff 20%,#d9d9d9 100%);box-shadow:0px 0px 5px rgba(0,0,0,0.8)}
+footer{background-image:linear-gradient(to top,#ffffff 20%,#d9d9d9 100%);border-top:1px solid #999999}
+
+/* breakpoints */
+@media(min-width:768px){.container{width:750px}}
+@media(min-width:992px){.container{width:970px}}
+@media(min-width:1200px){.container{width:1170px}}
+
+#pagenav{box-shadow:0px 0px 5px rgba(0,0,0,0.8)}

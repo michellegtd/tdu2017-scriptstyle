@@ -1,0 +1,82 @@
+/*Custom Stylesheet
+Alexander Aston Zapata
+az.alexander@uky.edu
+Last Updated: 3/28/17
+UKY Studio Abroad Custom layout 
+*/
+
+/* This is the contanier that holds all the main content */
+main{
+    background-color:#ffffff;
+	 box-shadow:none;
+}
+
+/* This is the outside gutter regions */
+body{
+	background-color:rgba(240,240,240,0.8);
+	background-image: none;
+	}
+	
+/* This is the main SA header that runs along the top of all the pages */
+header#pageheader{
+	background-color: rgba(0, 51, 160, .9);
+	}
+	
+/* This is the main SA footer that runs along the bottom of all the pages */
+footer#pagefooter{
+	padding: 2px;
+}
+
+/* This removes the box shawdow from panels to give it a "flat" feel */
+.panel {
+    box-shadow: none;
+}
+/* This removes the color gradient from all panel headers */
+.panel .panel-heading{
+	background-image: none;
+}
+/* This changes the border color of all panels to a light grey color to match overall theme */
+.panel-primary{
+    border-color: #f3f3f3;
+}
+
+/* This removes the box shawdow from Announcements box */
+#pagebodysidebar .sidebar-nav{
+	box-shadow: 0 6px 12px rgba(0,0,0,0.0);
+}
+/* Makes the announcement box longer so that it fills the empty space in that column instead of having dead space to the left of Dates/Deadlines */
+#announcements-frame #announcements-list{
+	height: 26.4em;
+}
+
+/* This removes the border from any list group item. Mainly seen on brochure pages around the buttons */
+li.list-group-item{
+    border:1px solid #fff;
+}
+
+/* This changes the program brochure tabs to have a white background when clicked instead of the @primary-color specified to links */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+	background-color: #ffffff;
+}
+
+/* Makes the select boxes "longer" so that more options are viewable. Less Scrolling within small boxes trying to select multiple values*/
+select[multiple], select[size]{
+    height: auto;
+    min-height: 150px;
+}
+
+/* format the bootstrap well to look more like a sub-section of the Applications header */
+#student_app_instructions {
+	margin-bottom: 0px;
+	background-color: #fff;
+	border-radius: 0px;
+}
+
+/* Add a big easy submit button fixed to bottom of page so that you don't have to scroll after parameters are set*/
+button#btm_search {
+    width: 100%;
+    font-size: 2em;
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+}

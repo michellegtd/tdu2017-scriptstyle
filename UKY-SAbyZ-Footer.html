@@ -1,0 +1,79 @@
+<!--Footer html
+Alexander Aston Zapata
+az.alexander@uky.edu
+Last Updated: 3/28/17
+UKY Studio Abroad Custom Footer 
+-->
+<html>
+<head>
+<style>
+/* Sets the color of all elements and text within the element with ID: Foot to white*/
+div#foot {
+    color: #fff;
+}
+
+/* makes all links (a) within the footer-links class white */
+.footer-links a {
+    color:#fff;
+}
+ 
+ /* Changes the color of the text of all links within the footer-links class to blue on hover */
+ .footer-links a:hover {
+	 color: #005daa; 
+ }
+ 
+  /* set a cusom size to the up arrow icon */
+.fa-chevron-up
+{
+ font-size: 1.75em;
+}
+
+/* This section of css makes social media icons in footer interactive by scaling the size of the icons on hover */
+.scale-effect:hover {
+     -webkit-transform: scale(1.3);	/* Chrome, Opera 15+, Safari 3.1+ */
+     -moz-transform: scale(1.3);		/* Firefox */
+     -o-transform: scale(1.3);			/* Opera */
+	 -ms-transform: scale(1.3);		/* IE9 */
+ }
+ 
+  /* Insures proper space in between icons for scaling and overall look*/
+ .scale-effect {
+	margin-right: 10px;
+ }
+
+</style>
+</head>
+<body>
+	<!-- Start row-->
+	<div id="foot" class="row">
+	<!-- Start column-->
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-left footer-links" style="margin: 14px 0px 10px 0px; padding: 0px 45px 0px 45px;">
+			<a href="mailto:EducationAbroad@uky.edu">EducationAbroad@uky.edu</a> | 859.257.4067 | <a href="http://www.uky.edu/educationabroad">www.uky.edu/educationabroad</a> | &copy; University of Kentucky | An Equal Opportunity University 
+		</div><!-- End Column-->
+
+		<!-- Start column-->
+		<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 footer-links" style="margin: 10px 0px 10px 0px; padding-left: 45px; width: 320px;">
+						<!-- Facebook -->
+						<a href="https://www.facebook.com/UKYabroad/" target="_blank"><i class="fa fa-facebook-square fa-2x scale-effect"></i></a>
+						<!-- Instagram -->
+						<a href="http://instagram.com/ukyabroad/" target="_blank"><i class="fa fa-instagram fa-2x scale-effect"></i></a>
+						<!-- Twitter -->
+						<a href="http://twitter.com/EAatUK" target="_blank"><i class="fa fa-twitter-square fa-2x scale-effect"></i></a>
+						<!-- Wordpress -->
+						<a href="http://enkompassuky.com" target="_blank"><i class="fa fa-wordpress fa-2x scale-effect"></i></a>
+						<!-- pinterest -->
+						<a href="http://www.pinterest.com/ukyedabroad/" target="_blank"><i class="fa fa-pinterest-square fa-2x scale-effect"></i></a>
+						<!-- Youtube -->
+						<a href="https://www.youtube.com/channel/UCCUtivzqxYmPh_ptxYiQK3w" target="_blank"><i class="fa fa-youtube-square fa-2x scale-effect"></i></a>
+
+		</div><!-- End column-->
+
+		<!-- Start column-->
+		<div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 footer-links scrollup" style="float: right; margin: 14px 0px 10px 0px; width: 115px;">
+			<!-- Back to Top arrow -->
+			<a href="#" data-toggle="tooltip" data-placement="top" title="Back to Top"><i class="fa fa-chevron-up scale-effect"></i></a>
+		</div><!-- End column-->
+	</div><!-- End row-->
+
+</body>
+</html>

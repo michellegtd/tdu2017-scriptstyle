@@ -1,0 +1,182 @@
+<!----------------------------------------------
+Custom Login page 
+Alexander Aston Zapata
+az.alexander@uky.edu
+Last Updated: 3/28/17
+UKY Studio Abroad Custom Login page 
+using Bootstrap Modal UI component
+------------------------------------------------>
+<style type="text/css">
+/* homepage button creation and effects-------------------------------------------------------- */
+
+/* Create button */
+.button {
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #0068be;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 20px;
+	padding: 12px;
+	width: 192px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+/*  style content inside button */
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+/* Add double carrot after the content within the span, but make invisiable and "out of view" for entrence effect on hover */
+.button span:after {
+	content: '»';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+/* make room for double carrot */
+.button:hover span {
+	padding-right: 20px;
+}
+
+/* bring double carrot into view and make visable */
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+/* modal effects----------------------------------------------------- */
+
+/* set background color and text color for the entire modal */
+.modal {
+	background: rgba(39,41,43,0.955);
+	color: #fff;
+	
+}
+
+/* remove the bottom border on the header section of the modal */
+.modal-header{
+	border-bottom: none;
+}
+
+/* create login "buttons" via height and borders */
+.image-block {
+    border: 2px solid #fff;
+    padding: 0px;
+    height: 200px;          
+}
+
+/* format the paragraph holding the text for each login button */
+.image-block > p {
+    width: 100%;
+    height: 100%;
+    font-weight: normal;
+    font-size: 2.5em;
+    color: #fff;
+    padding: 5px;
+    vertical-align: top;
+    display: table;
+}
+
+/* Change the background on hover and ensure text stays white */
+.image-block:hover > p {
+    background-color: rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+/* works with .image-block > p to center text no matter viewport size */
+.tile-text{
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center;
+}
+
+/* Insures columns are stacked and centered */
+.col-centered{
+	margin: 0 auto;
+	float: none;
+}
+
+/* Makes sure that link acts as button by removing the underline on hover */
+a:hover{
+	text-decoration: none;
+}
+
+/* Increases size of title for ease of readability */
+.title{
+	font-size: 2.0em;
+}
+
+/* pushes the login title and columns down from top of viewport */
+.m-content{
+	padding:100px 0;
+}
+
+/* formats the close button  */
+.close{
+	font-size: 3.5em;
+	color: #fff;
+	padding: 25px !important;
+	opacity: 1;
+}
+
+/* changes color of close button on hover */
+.close:hover{
+	color: rgba(255,255,255,0.15);
+}
+</style>
+
+<!-- Start homepage content -->
+<center>
+	<h3>Studio Abroad Application Homepage</h3>
+
+	<div style="text-align: left;">
+		<p>Please login to start your application process. To search for available programs, click the program search button. If you&#39;d like to learn more about Education Abroad and its procedures, Health &amp; Safety, academic credit, MAPS etc., then click back to website.</p>
+	</div>
+
+	<!-- Login Button-->
+	<button class="button" data-target="#myModal" data-toggle="modal" style="vertical-align:middle"><span>Login </span></button>
+	<!-- Program Search Button-->
+	<button class="button" onclick="location.href='http://ea.uky.edu/index.cfm?FuseAction=Programs.AdvancedSearch';" style="vertical-align:middle"><span>Program Search </span></button>
+	<!-- Back to Website Button-->
+	<button class="button" onclick="location.href='http://www.uky.edu/international/educationabroad';" style="vertical-align:middle"><span>Back to website </span></button>
+</center>
+<!-- End Homepage content -->
+
+<!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		
+		  <!-- Modal content-->
+		<div class="m-content">
+			<div class="modal-header">
+				<h4 class="title text-center">Choose your Login</h4>
+			</div>
+			
+			<!-- Body of Modal-->
+			<div class="modal-body text-center">
+				<!-- Start row-->
+				<div class="row">
+					<a href="https://ea.uky.edu/secure/">
+						<div class="image-block col-md-4 col-xs-10 col-centered">
+							<p> <span class="tile-text"> UK Student, Faculty, Staff</span></p>
+						</div>
+					</a>	
+					<a href="https://ea.uky.edu/index.cfm?FuseAction=Security.ExistingUserLogin">
+						<div class="image-block col-md-4 col-xs-10 col-centered">
+							<p> <span class="tile-text"> Non-UK Applicant </span></p>
+						</div>
+					</a>
+				</div><!-- End row-->
+			</div><!-- End Modal Body -->
+		</div><!-- End Modal Content -->
+	</div><!-- End Modal -->
