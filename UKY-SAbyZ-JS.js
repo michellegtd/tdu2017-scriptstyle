@@ -57,12 +57,15 @@ $(document).ready(function () {
 	//Copys the last row of table (holds count) and makes it the first row on table
 	if(window.location.href.indexOf("StudentAdmin.SearchWizard_3&Search_ID") > -1 || window.location.href.indexOf("Administration.SavedSearch&Search_ID") > -1) {
 	
-		//find last row and copy its content
-		var row = $('.panel-primary table tbody tr:last').html();
-	
-		//add new row as the first row with contents of last row
-		$('.panel-primary table tbody').prepend('<tr>'+row+'</tr>');
-	
+		//only pull last row if grouped by applicant
+		if($("a[onclick*='user_name']").parent().hasClass( 'active' ) == true){
+			
+			//find last row and copy its content
+			var row = $('.panel-primary table tbody tr:last').html();
+
+			//add new row as the first row with contents of last row
+			$('.panel-primary table tbody').prepend('<tr>'+row+'</tr>');
+		};
 	};
 	
 });
