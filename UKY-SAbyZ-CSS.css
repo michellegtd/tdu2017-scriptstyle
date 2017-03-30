@@ -80,3 +80,9 @@ button#btm_search {
     bottom: 0px;
     right: 0;
 }
+
+/* Add urgency color to Locator search button on admin homepage to make easily identifiable */
+a.btn.home_locator_btn {
+    background-color: red;
+    border-color: red;
+}
