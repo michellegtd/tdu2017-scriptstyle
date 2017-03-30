@@ -1,7 +1,7 @@
 /*Custom Javascript
 Alexander Aston Zapata
 az.alexander@uky.edu
-Last Updated: 3/28/17
+Last Updated: 3/30/17
 UKY Studio Abroad Custom jQuery
 */
 
