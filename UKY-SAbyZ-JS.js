@@ -57,12 +57,35 @@ $(document).ready(function () {
 	//Copys the last row of table (holds count) and makes it the first row on table
 	if(window.location.href.indexOf("StudentAdmin.SearchWizard_3&Search_ID") > -1 || window.location.href.indexOf("Administration.SavedSearch&Search_ID") > -1) {
 	
-		//find last row and copy its content
-		var row = $('.panel-primary table tbody tr:last').html();
+		//only pull last row if grouped by applicant
+		if($("a[onclick*='user_name']").parent().hasClass( 'active' ) == true){
+
+
+			//find last row and copy its content
+			var row = $('.panel-primary table tbody tr:last').html();
+		
+			//add new row as the first row with contents of last row
+			$('.panel-primary table tbody').prepend('<tr>'+row+'</tr>');
 	
-		//add new row as the first row with contents of last row
-		$('.panel-primary table tbody').prepend('<tr>'+row+'</tr>');
 	
+		};
 	};
 	
-});
+	//Add locator search button & link to page body content page actions on admin homepage
+	if(window.location.href.indexOf("Administration.Home&RequiredProfile") > -1) {
+		
+		//Add Locator Search button to admin home page on md+ devices
+		$('#pagebodycontentpageactions').children(':eq(0)').prepend('&nbsp;<a type="button" class="btn btn-primary home_locator_btn" href="index.cfm?FuseAction=StudentAdmin.SearchRisk&amp;" title="Locator Search">Locator Search</a>');
+		
+		//Add Locator Search button to admin homepage on sm & xs devices
+		$('#pagebodycontentpageactions').children(':eq(1)').prepend('&nbsp;<a type="button" class="btn btn-primary home_locator_btn" href="index.cfm?FuseAction=StudentAdmin.SearchRisk&amp;" title="Locator Search">Locator Search</a>&nbsp;');
+		
+		//Add Locator Search link within options dropdown menu on sm & xs devices
+		$('#pagebodycontentpageactions ul').prepend('<li><a href="index.cfm?FuseAction=StudentAdmin.SearchRisk&amp;" title="Locator Search">Locator Search</a></li> ');
+		
+				
+	};
+	
+	
+	
+});//End document ready 
