@@ -72,7 +72,7 @@ $(document).ready(function () {
 	};
 	
 	//Add locator search button & link to page body content page actions on admin homepage
-	if(window.location.href.indexOf("Administration.Home&RequiredProfile") > -1) {
+	if(window.location.href.indexOf("Administration.Home&RequiredProfile") > -1 || window.location.href.indexOf("Portal.Home&RequiredProfile") > -1) {
 		
 		//Add Locator Search button to admin home page on md+ devices
 		$('#pagebodycontentpageactions').children(':eq(0)').prepend('&nbsp;<a type="button" class="btn btn-primary home_locator_btn" href="index.cfm?FuseAction=StudentAdmin.SearchRisk&amp;" title="Locator Search">Locator Search</a>');
